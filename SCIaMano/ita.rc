@@ -1,0 +1,5 @@
+
+#define ITALIAN
+
+#include "rsrc.rc"
+
