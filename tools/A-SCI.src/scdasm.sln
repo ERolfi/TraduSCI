@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "scdasm", "scdasm.vcproj", "{FF3942A5-BEFC-43C6-8E64-75DA494D0030}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rdkernel", "rdkernel.vcproj", "{4787998F-2B6F-4357-9910-365273687B3F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "scasm", "scasm.vcproj", "{0092CC58-C5A9-4D73-A0A0-61BCC5F24D6C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{FF3942A5-BEFC-43C6-8E64-75DA494D0030}.Debug.ActiveCfg = Debug|Win32
+		{FF3942A5-BEFC-43C6-8E64-75DA494D0030}.Debug.Build.0 = Debug|Win32
+		{FF3942A5-BEFC-43C6-8E64-75DA494D0030}.Release.ActiveCfg = Release_SCI11|Win32
+		{FF3942A5-BEFC-43C6-8E64-75DA494D0030}.Release.Build.0 = Release_SCI11|Win32
+		{4787998F-2B6F-4357-9910-365273687B3F}.Debug.ActiveCfg = Debug|Win32
+		{4787998F-2B6F-4357-9910-365273687B3F}.Debug.Build.0 = Debug|Win32
+		{4787998F-2B6F-4357-9910-365273687B3F}.Release.ActiveCfg = Release_SCI32|Win32
+		{4787998F-2B6F-4357-9910-365273687B3F}.Release.Build.0 = Release_SCI32|Win32
+		{0092CC58-C5A9-4D73-A0A0-61BCC5F24D6C}.Debug.ActiveCfg = Debug|Win32
+		{0092CC58-C5A9-4D73-A0A0-61BCC5F24D6C}.Debug.Build.0 = Debug|Win32
+		{0092CC58-C5A9-4D73-A0A0-61BCC5F24D6C}.Release.ActiveCfg = Release|Win32
+		{0092CC58-C5A9-4D73-A0A0-61BCC5F24D6C}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
