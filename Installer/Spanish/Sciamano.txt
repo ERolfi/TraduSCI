@@ -1,0 +1,128 @@
+________________________________________________________
+Cambios en la versión 1.4:
+
+INTERFAZ
+- Traducción automática de frases con Google Translate
+
+
+________________________________________________________
+Cambios en la versión 1.3:
+
+INTERFAZ
+- Interfaz y menú simplificados
+- Nueva lista de oraciones de varias columnas
+- La información de botones y clones ya no está en la interfaz
+- Ver clones de secuencias como una lista de frases
+- Nueva fuente para las oraciones "Courier New"
+- Elemento de menú "Ir a la entrada siguiente"
+
+ERRORES CORREGIDOS
+- Ahorro de problemas con la clasificación de casos
+- Varios problemas de caracteres especiales en el manual.
+- Duplicación de una secuencia de clones en presencia de clasificación
+- Trastorno de algunos nodos del gráfico (a menudo nodo 1)
+- Error en el formato MAP en presencia de sincronizaciones de voz
+- Eliminación de las referencias MAP, solo si son nulas, en la fase de estabilización
+- Varios errores que afectan a los nombres de las rutas
+- Varias bagatelas
+
+OTRO
+- Capacidad para importar / exportar etiquetas definidas en archivos de texto
+- Funcionalidad de reproducción de voz
+- Detección automática de archivos temporales después de fallas.
+- Lectura de volúmenes confiados a un módulo DLL externo
+- Nuevo manual más conciso
+- Versión en español
+
+
+________________________________________________________
+Cambios en la versión 1.2Beta:
+
+CLONACIÓN
+- Posibilidad de seleccionar referencias a secuencias / estructuras
+
+MAPA DE AUDIO
+- Edición de archivos MAP de audio en caso de fraseo
+- Importación / Exportación de archivos de audio MAP
+- Funcionalidad de comprobar la presencia de frases en un archivo MAP
+
+MANUAL
+- Posibilidad de dar más definiciones para cada palabra del manual
+- La función muestra el manual actual
+
+IMPORTACIÓN / EXPORTACIÓN / COMPARACIÓN
+- Posibilidad de importar un archivo de mensaje basado en etiquetas de oración
+- Posibilidad de importar también frases traducidas de un archivo de mensaje
+- Se corrigió el error al importar un archivo de mensaje con un orden de clasificación diferente al actual
+- Se corrigió el error al comparar dos archivos con diferente orden.
+- Posibilidad de volver a importar frases exportadas previamente a un archivo de texto
+
+GRÁFICOS
+- Posibilidad de ver el gráfico de la oración en blanco y negro (adecuado para imprimir)
+- Los nombres de las etiquetas definidas por el usuario se han insertado en el gráfico.
+- Gráficos desactivados para archivos de versión SCI01
+
+ETIQUETAS DE ESQUÍ
+- Posibilidad de que el usuario defina los nombres de las etiquetas, con almacenamiento permanente
+- Reconocimiento automático de los nombres de los Objetos en la etiqueta a partir de un archivo HEAP
+
+INTERFAZ
+- Ventana de propiedades que enumera diversa información sobre el archivo (versión, número de frases, ...)
+- Cambio de tamaño dinámico de ventanas con configuración de guardado en archivos MSG
+- Lista navegable de todas las frases en el archivo a la derecha de la interfaz
+- Pantalla de inicio
+- Otras mejoras de interfaz
+
+OTRO
+- Actualización manual
+- (FutureBox!) Soporte de los futuros formatos de archivo de SCIaMano en el algoritmo de lectura / escritura
+- Conversión de licencias a código abierto (GPL)
+
+
+________________________________________________________
+Cambios en la versión 1.1.5 (lanzamiento interno):
+
+- Adición del manual de condiciones especiales
+- Gestión de frases clonadas
+- La búsqueda en varios archivos ahora es circular y vuelve al archivo inicial
+- Orden de nodos en gráficos y nuevos tipos de gráficos
+- Nueva versión de Wingraph que admite guardar gráficos
+- Se corrigieron algunos errores introducidos en la carga de archivos introducidos en la versión 1.1.4A
+- Adiciones al manual
+
+
+________________________________________________________
+Cambios en la versión 1.1.4 (lanzamiento interno):
+
+- Ordenamiento de sentencias según las situaciones en las que ocurren
+- Visualización de frases según bloques de gráficos en estructura jerárquica
+- Posibilidad de ver frases clonadas
+- Extracción de un archivo de mensaje de un VOLUME SCI
+- Revisión de la interfaz gráfica
+
+
+________________________________________________________
+Cambios en la versión 1.1.3:
+
+- La búsqueda de palabras ahora puede continuar en archivos posteriores en la misma carpeta
+- Comparación de frases traducidas entre el archivo en uso y un segundo archivo con creación
+  de un archivo de texto que enumera las diferentes frases
+- Copias de seguridad automáticas de archivos modificados (con extensión .bak)
+- Creación de un archivo temporal útil en caso de caída (temp.msg)
+- Importación de frases traducidas de un segundo archivo de mensaje
+- Otros cambios generales
+
+
+________________________________________________________
+Cambios en la versión 1.1.2:
+
+- Primera versión internacional (inglés) del programa y el manual
+- Se agregó la funcionalidad de búsqueda / reemplazo de palabras
+- Ahora puedes elegir el tamaño de fuente de las oraciones
+- Solucionado el problema al cargar archivos SCI32 v2.1 (CD de Larry 6)
+- Cambios generales en la interfaz.
+
+
+________________________ 
+
+Translated using Google Translate.

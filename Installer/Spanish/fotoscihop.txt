@@ -1,0 +1,43 @@
+﻿FotoSCIhop 1.3 - (c) Enrico Rolfi, 2004-2021
+
+Este programa es para editar imágenes utilizadas en juegos SCI1.1 y SCI32.
+
+Usando una interfaz de usuario intuitiva, será posible reemplazar las imágenes originales
+con versiones modificadas. Las imágenes a reemplazar deben tener la misma tabla que
+colores de la imagen original y por supuesto deben ser 256 colores. Es importante
+Mantenga los colores originales para evitar problemas de visualización en el juego. Algunos colores
+de hecho, son más importantes que otros, y otros son transparentes o translúcidos.
+
+No es posible crear nuevas imágenes con este programa, solo para ver y
+editar imágenes existentes. 
+
+
+
+Cambios en la versión 1.3:
+- Soporte completo para juegos SCI32 recientes (soporte LINKS)
+- Nueva información agregada al panel de Propiedades
+- Errores minimos arreglados
+
+
+Cambios en la versión 1.2:
+- Se agregó la capacidad de cambiar la posición x, y de una celda
+
+
+Cambios en la versión 1.1:
+
+- Importación y exportación de paletas en formato BMP
+- Posibilidad de cargar desde SCI Volumes
+- Se agregó ralentización al comando "Archivo siguiente"
+- Nombre cambiado a FotoSCIhop
+- Licencia de código abierto
+
+
+
+
+
+Para más información e instrucciones más detalladas, consulte el manual TraduSCI.
+
+Visite mi página: http://erolfi.wordpress.com 
+
+
+Translated using Google Translate.

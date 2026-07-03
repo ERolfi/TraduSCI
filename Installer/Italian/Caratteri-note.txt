@@ -1,0 +1,5 @@
+Nelle cartelle sono contenuti i caratteri internazionali che ho estratto da alcuni
+giochi SCI. In alcuni casi c'è anche una sottocartella chiamata standard che contiene
+i caratteri standard del gioco (quelli non estesi ossia senza i caratteri speciali).
+Sono disponibili molti altri caratteri estesi negli altri giochi internazionali di
+Sierra che includerò a questi in una futura versione del pacchetto TraduSCI.

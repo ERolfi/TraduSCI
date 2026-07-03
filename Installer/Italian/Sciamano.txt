@@ -1,0 +1,170 @@
+
+________________________________________________________
+Cambiamenti nella versione 1.4:
+
+INTERFACCIA
+- Traduzione automatica delle frasi con Google Translate
+
+
+________________________________________________________
+Cambiamenti nella versione 1.3.1:
+
+- Ritorno al set di caratteri OEM per compatibilità con alcune lingue europee
+
+
+________________________________________________________
+Cambiamenti nella versione 1.3:
+
+INTERFACCIA
+- Interfaccia e menù semplificati
+- Nuova lista multicolonna delle frasi
+- Pulsante e informazioni sui cloni non più nell'interfaccia
+- Visualizzazione dei cloni di sequenze come elenco di frasi
+- Nuovo font per le frasi "Courier New"
+- Voce del menù "Vai alla prossima annotazione"
+
+BUGS RISOLTI
+- Problema nel salvataggio con ordinamento Case
+- Vari problemi di caratteri speciali nel prontuario
+- Duplicazione di una sequenza di cloni in presenza di ordinamento
+- Disordinamento di alcuni nodi del grafico (spesso il nodo 1)
+- Errore nel formato dei MAP in presenza di sincronizzazioni vocali
+- Eliminazione dei riferimenti MAP, solo se nulli, in fase di sclonazione
+- Vari bug che influivano sui pathname
+- Varie piccolezze
+
+ALTRO
+- Possibilità di importare/esportare in file di testo le etichette definite
+- Funzionalità di riproduzione delle voci
+- Rilevazione automatica di file temporanei in seguito a crash
+- Lettura dei volumi affidata ad un modulo DLL esterno
+- Nuovo manuale più sintetico
+- Versione in Spagnolo
+
+
+________________________________________________________
+Cambiamenti nella versione 1.2Beta:
+
+CLONAZIONE
+- Possibilità di sclonare i riferimenti alle sequenze/strutture 
+
+MAP AUDIO
+- Modifica dei file MAP dell'audio in caso di sclonazione di frasi
+- Importazione/Esportazione di file audio MAP
+- Funzionalità di verifica della presenza delle frasi in un file MAP
+
+PRONTUARIO
+- Possibilità di dare più definizioni per ogni parola del prontuario
+- Funzione visualizza prontuario corrente
+
+IMPORTAZIONE/ESPORTAZIONE/CONFRONTO
+- Possibilità di importare un file Message in base alle etichette delle frasi
+- Possibilità di importare anche le frasi tradotte da un file Message
+- Riparato errore nell'importare un file Message con ordinamento diverso da quello corrente
+- Riparato errore nel confronto tra due file con ordinamenti diversi
+- Possibilità di reimportare le frasi esportate in precedenza in un file di testo
+
+GRAFI
+- Possibilità di visualizzare il grafo delle frasi in bianco e nero (adatto per la stampa)
+- Inseriti all'interno del grafico i nomi delle etichette definite dall'utente
+- Disattivati i grafi per i file versione SCI01
+
+ETICHETTE SCI
+- Possibilità per l'utente di definire i nomi delle etichette, con memorizzazione permanente
+- Riconoscimento automatico dei nomi degli Oggetti in etichetta a partire da un file HEAP
+
+INTERFACCIA
+- Finestra Proprietà che elenca varie informazioni sul file (versione, numero frasi, ...) 
+- Ridimensionamento dinamico delle finestre con salvataggio impostazioni nei file MSG
+- Elenco navigabile di tutte le frasi del file sulla destra dell'interfaccia
+- Schermata iniziale
+- Altri miglioramenti all'interfaccia
+
+ALTRO
+- Aggiornamento del manuale
+- (FutureBox!) Supporto dei formati file futuri di SCIaMano nell'algoritmo di lettura/scrittura
+- Conversione della licenza ad open source (GPL)
+
+
+________________________________________________________
+Cambiamenti nella versione 1.1.5 (release interna):
+
+- Aggiunta del prontuario dei termini speciali
+- Gestione delle frasi clonate
+- La ricerca in più file è ora circolare, e ritorna al file di partenza
+- Ordinamento dei nodi nei grafi e nuovi tipi di grafi
+- Nuova versione di Wingraph che supporta il salvataggio dei grafi
+- Correzione di alcuni bug introdotti nel caricamento dei file introdotti nella versione 1.1.4A
+- Aggiunte al manuale
+
+
+________________________________________________________
+Cambiamenti nella versione 1.1.4 (release interna):
+
+- Ordinamento delle frasi in funzione delle situazioni in cui si verificano
+- Visualizzazione delle frasi secondo grafi a blocchi in strutturazione gerarchica
+- Possibilità di visualizzare le frasi clonate
+- Estrazione di un file Message da un VOLUME SCI
+- Revisione dell'interfaccia grafica
+
+
+________________________________________________________
+Cambiamenti nella versione 1.1.3:
+
+- La ricerca di parole può ora proseguire nei file successivi della stessa cartella
+- Confronto delle frasi tradotte tra il file in uso ed un secondo file con creazione
+  di un file di testo che elenca le frasi differenti
+- Copie di Backup automatiche dei file modificati (con estensione .bak)
+- Creazione di un file temporaneo utile in caso di crash (temp.msg)
+- Importazione di frasi tradotte da un secondo file Message
+- Altre modifiche generali
+
+
+________________________________________________________
+Cambiamenti nella versione 1.1.2:
+
+- Prima versione internazionale (Inglese) del programma e del manuale
+- Aggiunta funzionalità di ricerca/sostituzione delle parole
+- Ora si può scegliere la grandezza dei caratteri delle frasi
+- Corretto problema nel caricamento di file SCI32 v2.1 (Larry 6 CD)
+- Modifiche generali all'interfaccia
+
+
+________________________________________________________
+Cambiamenti nella versione 1.1:
+
+- Fase Beta terminata, il programma è rilasciato in versione 1.1
+- Nuovo formato TraduSCI2 per i file che si sostituisce al formato precedente.
+  A causa di una limitazione ereditata dal formato originale di Sierra, il vecchio
+  formato rendeva inutilizzabili i file più grandi di 64Kbytes. Il nuovo formato
+  permette invece di memorizzare file di qualunque grandezza.
+- Alcune variazioni minori nell'interfaccia
+
+
+________________________________________________________
+Cambiamenti nella versione 1.0Beta3:
+
+- Modifica del formato di impaginazione dei file di testo esportati
+- Correzione di alcune imprecisioni grafiche
+
+
+________________________________________________________
+Cambiamenti nella versione 1.0Beta2:
+
+- Risoluzione di problemi nella gestione dei file vuoti
+- Ora la voce 'Salva...' del menù è attiva solo se ci sono cambiamenti non salvati
+- Anche i messaggi di attenzione si presentano solo in caso di modifiche non salvate
+
+
+________________________________________________________
+Cambiamenti nella versione 1.0Beta1:
+
+- Aggiunta la possibilità di eliminare la traduzione di una frase
+- Ora nei file di testo esportati le frasi sono indicizzate 
+
+
+________________________________________________________
+Prima versione rilasciata 1.0Beta0
+
+
+Visita la mia pagina: http://erolfi.wordpress.com

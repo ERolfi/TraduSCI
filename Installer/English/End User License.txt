@@ -1,0 +1,7 @@
+End User License
+
+TraduSCI was made by Enrico Rolfi and is open source (GPL licence), it can be freely used and modified. This program is distributed without any warranty and the author does not respond of eventual damages provoked in any way by its use.
+In this SCI1.1/SCI32 translation package the following third party tools are also present: SCI Resource Dumper by Vladimir Gneushev, that is supplied in a version from me purposely modified. SCI Decoder VGA is by Carl Muckenhoupt and has been modified by me as well.
+Audio.exe for playing game voices is a tool from the SCI1Utils.7z package available at the SCI Viewer web page.
+WinGraph32 is a version for Windows of the VCG open source tool, compiled by DataRescue and whose sources are available from their web site.
+None of these persons (myself included) is in any way affiliated to Sierra, that holds copyright on SCI technologies and on all the games listed in the manual of TraduSCI. 

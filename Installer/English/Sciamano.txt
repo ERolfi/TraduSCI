@@ -1,0 +1,172 @@
+
+________________________________________________________
+Changes in version 1.4:
+
+INTERFACE
+-Added automatic translation function using Google Translate
+
+
+________________________________________________________
+Changes in version 1.3.1:
+
+- Revert back to the OEM charset for compatibility with certain European languages
+
+
+________________________________________________________
+Changes in version 1.3:
+
+INTERFACE
+- GUI and menus simplified
+- New multi-column string list
+- Clone button and clone info removed from the main GUI
+- Multi-string clones are now displayed as list of strings
+- New font for strings: "Courier New"
+- Menu function "Go to the next note"
+
+FIXED BUGS
+- Problem when saving and using a Case sorting
+- Various problems with special characters in Glossary
+- Error duplicating a sequence clone when using a sorting other than ByIndex
+- Graph nodes in wrong order (often node 1)
+- Error in MAP format used with vocal SYNCs
+- Removing MAP reference, if void, while uncloning
+- Various bugs on pathnames
+- Other glitches
+
+OTHER
+- Function to import/export text files containing user-defined labels
+- Playing of character voices
+- Automatic detection of temporary files left after a program crash
+- Loading a SCI VOlume is now delegated to an external DLL module
+- New, simpler manual
+- Spanish version
+
+
+________________________________________________________
+Changes in version 1.2Beta:
+
+CLONES
+- Uncloning of references to sequences/structures
+
+AUDIO MAP
+- Updating of audio MAPs when uncloning strings
+- Import/Export of audio MAP files
+- Funzionalità di verifica della presenza delle frasi in un file MAP
+
+GLOSSARY
+- Support for multiple definitions of each word
+- "Show Glossary" function
+
+IMPORT/EXPORT/COMPARE
+- Message file importing, based on Label matching
+- Importing of translated string from another Message
+- Fixed error when importing from a Message with a different sorting
+- Fixed error when comparing a Message with a different sorting
+- Reimporting of strings previuosly exported to a text file
+
+GRAPHS
+- Black and white graph for laser printing
+- User-defined labels are now displayed in graphs
+- Graphs disabled for SCI01 games
+
+SCI LABELS
+- User-defined label names (saved to MSG file)
+- Extraction of label names from corresponding HEAP files
+
+INTERFACE
+- Properties window with informations on the current file
+- Window resizing
+- List of strings on the right of the GUI
+- Splash screen
+- Other GUI improvements
+
+OTHER
+- Manual updated
+- (FutureBox!) Support for FUTURE file formats of future SCIaMano versions
+- Open source (GPL) license adopted
+
+
+________________________________________________________
+Changes in version 1.1.5 (internal release):
+
+- Glossay of adopted translations
+- Management of string clones
+- Searching is now circular, and returns to the first file opened
+- Sorted graphs and new types of graphs
+- New version of WinGraph adopted (allows saving of graph files)
+- Bugs on file loading introduced in version 1.1.4A are fixed
+- Additions to the manual
+
+
+________________________________________________________
+Changes in version 1.1.4 (internal release):
+
+- Strings sorting based on Case (environmental situation when they are triggered)
+- Connected graph for visualization of strings dependencies
+- Displaying of string clones
+- Extracting Message files from SCI Volumes
+- Revision of the GUI
+
+
+________________________________________________________
+Changes in version 1.1.3:
+
+- Word searching can now continue in other Message files from the same directory
+- Compare of translated strings between the current file and a second one, resulting
+  in a log file with differences
+- Automatical backup of modified files (with .bak suffix)
+- Creation of a temporary file in case of system crash or power loss (temp.msg)
+- Importing of translated strings from a second Message file
+- Other general changes
+
+
+________________________________________________________
+Changes in version 1.1.2:
+
+- First international version (English) for both the program and the manual
+- Added ability to find/replace words
+- Now you can choose the font size used to display strings
+- Fixed problem when loading SCI32 v2.1 files (i.e. Larry 6 CD)
+- Other changes and improvements to the GUI
+
+
+________________________________________________________
+Changes in version 1.1:
+
+- Beta stage terminated, program is now released as version 1.1
+- New file format TraduSCI2 is introduced in place of the previous one.
+  The old format was corrupting files bigger than 64Kbytes due to a limitation
+  inherited from the original Sierra file format. The new format allows you to
+  store files of any size you need, instead.
+- A few minor improvements in the user interface
+
+
+________________________________________________________
+Changes in version 1.0Beta3:
+
+- New more comfortable layout for exported text files
+- Some minor graphic glitches were fixed
+
+
+________________________________________________________
+Changes in version 1.0Beta2:
+
+- Solved certain problems when loading empty files
+- Now the 'Save...' menu item is only available when there actually exists
+  some unsaved changes
+- Also now warning message boxes only appear when there are unsaved changes
+
+
+________________________________________________________
+Changes in version 1.0Beta1:
+
+- Added the functionality to clear a previously defined translation
+- Now strings are indexed when exported to text files 
+
+
+________________________________________________________
+First released version 1.0Beta0
+
+
+
+Visit my site: http://erolfi.wordpress.com

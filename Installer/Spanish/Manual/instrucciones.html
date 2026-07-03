@@ -1,0 +1,1166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<title>¡Manual de Tradusci!</title>
+	</head>
+
+	<body bgcolor="#ffffff">
+			<h1 align="center">¡Manual de TRADUSCI!</h1>
+		<div align="center"><pre>Programa para la traducción de juegos SCI1.1/SCI32</pre>
+		</div>
+		<div align="left">
+			<table border="0" cellspacing="0" cellpadding="10">
+				<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Licencia</font></b></div>
+					</td>
+					<td><b>
+      <p>
+      TraduSCI fue creado por Enrico Rolfi y es de código abierto (Licencia GPL);
+      puede ser usado y modificado libremente. Este programa es distribuido sin
+      ninguna garantía y el autor no responde de posibles daños provocados de
+      cualquier manera durante su uso.
+      </p>
+      <p>
+      En este paquete de traducción SCI1.1/SCI32, también hay otras herramientas
+      presentes: SCI Resource Dumper de Vladimir Gneushev, que es proporcionado
+      como una versión modificada intencionalmente por mí; SCI Decoder VGA de
+      Carl Muckenhoupt, otra versión también modificada por mí.
+      </p>
+      <p>
+      Audio.exe para reproducir las voces del juego es una herramienta del
+      paquete SCI1Utils.7z disponible en la página web de SCI Viewer.
+      </p>
+      <p>
+      WinGraph32 es una versión para Windows de la herramienta de código abierto
+      VCG, compilada por DataRescue y cuyos recursos están disponibles en su
+      propia página web.
+      </p>
+      <p>
+      Ninguna de estas personas (yo incluído) está de ninguna manera afiliado
+      a Sierra quienes mantienen el copyright de la tecnología SCI y de todos
+      los juegos listados en este manual.
+      </p></b>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width="60"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Agradecimientos</font></b></div>
+					</td>
+					<td>
+      <p>Además de los autores de software mencionados en el párrafo de licencia, quiero agradecer a todos aquellos que han contribuido a recuperar el conocimiento técnico e histórico de los juegos de Sierra.
+Entre ellos, un agradecimiento especial va para <b>Michele Del Bene</b>, más conocido como <b>Micartu</b>, a cuya memoria está dedicado ahora el paquete TraduSCI. Michele hizo una gran contribución al panorama de la traducción amateur y fue un gran partidario e inspirador de este software. Aún habría hecho mucho, pero nos dejó demasiado pronto. Amigo, descansa en paz.</p>                      </td>
+				</tr>
+				<tr>
+					<td valign="top" width="60"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Inicio</font></b></div>
+					</td>
+					<td>
+      <p>
+      Este manual habla sobre SCI y enseña cómo traducir un juego SCI.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Esto se hace mucho más fácil al usar estas herramientas de traducción. En
+      particular SCIaMano ofrece un formato de archivo el cual es totalmente
+      compatible y utilizable con cada juego SCI.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Comencemos abriendo el programa SCIaMano y eligiendo la opción Abrir Volumen…
+      </p>
+	  <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Ahora tendremos que elegir un archivo cuyo nombre es, normalmente, RESOURCE.MAP,
+      que es un mapa (o mapeado) de todos los archivos contenidos en el Volumen
+      (normalmente llamado RESOURCE.000, RESOURCE.001, etc.).
+      </p>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Mensajes</font></b></div>
+					</td>
+					<td>
+      <p>
+      En este punto seremos capaces de elegir de una lista el archivo de Mensajes
+      (con extensión .MSG) que queramos modificar. Los Mensajes son simplemente
+      frases que se visualizan en el juego. Si algún problema ocurre durante esta
+      operación, será posible usar otra herramienta de extracción de datos del
+      volumen, como el programa SCI Resource Dumper, como se escribe en el Apéndice
+      de este manual.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Una vez elegido y cargado el archivo que queremos modificar, es sugerible el
+      hacer una copia del archivo en el directorio donde estamos trabajando. Para
+      ser capaces de usar estos archivos en el juego, además de reemplazar las
+      frases originales con las nuestras traducidas, habrá que colocar esos archivos
+      en el mismo directorio del juego, o en un directorio apropiado para PARCHES
+      (normalmente el directorio es "PATCHES"), o en cualquier que se especifique
+      en el archivo de configuración del juego (RESOURCE.CFG o RESOURCE.WIN).
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Por favor, presta atención pues podría haber otros archivos de Mensaje en el
+      directorio del juego, y para crear nuestra traducción tendríamos que traducir
+      esos archivos más tarde y colocarlos en lugar de los extraídos del Volumen.
+      Podemos cargarlos con SCIaMano usando la opción Cargar archivo…
+      </p>
+	  <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Una vez cargado el archivo, será mostrado una lista de todas las frases dentro
+      del archivo, con una serie de etiquetas (normalmente numéricas).
+      </p>
+	  <p>Nuestro trabajo como traductor consiste principalmente en traducir estas frases, utilizando el campo Traducción de la interfaz gráfica. Alternativamente, o como punto de partida, puede hacer uso de la traducción automática proporcionada por Google Translate a través de las funciones accesibles desde el menú Traducción. La computadora debe estar conectada a Internet para aprovechar esta función. Los tiempos de traducción automática son largos, para no ser bloqueados por Google; Recomiendo aprovechar el tiempo de inactividad para revisar las traducciones de Google que obviamente no son perfectas.</p>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Etiquetas</font></b></div>
+					</td>
+					<td>
+      <p>
+      Las etiquetas de la lista (nombre, verbo, evento) identifican el momento en el
+      que el mensaje será mostrado en el juego.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Como ejemplo, si tenemos la frase “I cannot open the door because it is locked!”
+      (en castellano, “¡No puedo abrir la puerta porque está cerrada!”), entonces el
+      nombre podría ser “door” (“puerta”), el verbo “open” (“abrir”) y el evento
+      “the door is locked” (“la puerta está cerrada”). A veces necesitaremos asociar
+      cada número a un nombre simbólico, para mayor claridad.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      La etiqueta “conversador” identifica al personaje del juego que dirá la frase
+      asociada al evento. La etiqueta “secuencia” es usada cuando lo ocurrido en el
+      evento provoca la visualización de más de una frase; normalmente sucede en
+      una cutscene (parte del juego donde el jugador ve una animación y no puede
+      controlar al personaje ni jugar), por ejemplo.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      La etiqueta Índice simplemente representa el orden en el cual las frases son
+      almacenadas en un archivo.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Es posible ordenar los mensajes de cualquiera de las etiquetas, haciendo clic
+      en la respectiva columna de la lista. Una visión más clara se puede obtener,
+      por ejemplo, de todas las frases que involucran a un nombre en particular.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Se pueden asignar nombres a cada número que identifique una etiqueta, usando los
+      campos en la barra superior del interface. Esta modificación afectará a todas
+      las frases que compartan la misma etiqueta numérica. Es posible, además, del
+      menú Etiquetas, exportan las asociaciones “número = nombre” en un archivo de
+      texto para así Importarlas en otro archivo MSG (pero considera que esto sólo
+      es funcional a cierto tipo de etiquetas. Conversador y Verbos son normalmente
+      de significado global, mientras Nombres tiene un número diferente en cada
+      archivo).
+      </p>
+	  <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Pero los nombres de la etiqueta “Nombres” pueden ser importados de un
+      archivo de Script Dinámico (conocido como Heap y cuya extensión es .HEP),
+      usando la opción apropiada del menú y eligiendo un Volumen como se hizo
+      anteriormente, o de un simple archivo .HEP.
+      </p>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Diagramas</font></b></div>
+					</td>
+					<td>
+      <p>
+      Para mayor claridad, es posible mostrar las frases en un diagrama, que se queda
+      en el formato de WinGraph.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Nota: si la ventana del diagrama se deja abierta y la frase es modificada, ¡esas
+      modificaciones no serán actualizadas en el diagrama automáticamente!
+      </p>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Clones</font></b></div>
+					</td>
+					<td>
+      <p>
+      A veces para mostrar un mensaje que es usado en más de un evento, puede ser
+      clonado, asignando el mismo texto a un evento diferente. Los mensajes cuyos
+      textos no son modificables son clones.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Para modificar un clon, elige la opción Clonar en el menú de Navegación.
+      Eligiendo la misma opción es también posible crear un nuevo clon, en caso
+      de que la frase elegida no fuera ya un clon.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Si el texto clonado no es para una simple frase, sino más bien para una
+      secuencia de frases, entonces se te ofrecerá la oportunidad de duplicar
+      la secuencia entera de frases para así poder modificarlas todas. La
+      alternativa a esto será reemplazar la secuencia entera con una simple
+      frase que -obviamente- no es aconsejable.
+      </p>
+	  <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Después de hacer operaciones con los clones, se recomienda verificar en el
+      juego la funcionabilidad de la frase modificada, porque en algunos casos
+      poco convencionales en el uso de scripts, puede ser posible causar errores
+      que no dejen ejecutar corréctamente el juego.
+      </p>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Audio</font></b></div>
+					</td>
+					<td>
+      <p>
+      Uno de los problemas inherentes a los clones es que normalmente hacen referencia
+      directamente al audio de sus frases originales. Cuando un clon se transforma en
+      una frase normal, es necesario también especificar un nuevo audio de referencia,
+      puesto que la referencia original de la frase se pierde. Esto lo hace el
+      programa automáticamente, el cual crea una copia de la referencia al audio
+      (normalmente las voces) original. Pero es posible el necesitar modificar el
+      archivo que contiene la referencia al audio, que está en un archivo de MAPeado
+      del audio (donde cada frase va asociada con el sonido a reproducir, con
+      extensión .MAP -no confundir con el mapa de los volúmenes-). Para hacer esto
+      puedes -otra vez- cargar un archivo MAP de un Volumen.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Obviamente, si nuestro juego no ofrece voces, no habrá archivos MAP que
+      modificar.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Cuando guardamos los cambios en un archivo de mensaje habiendo cargado un
+      archivo MAP, el archivo MAP se creará en el mismo directorio que el archivo
+      MSG, <b><i>¡sobreescribiendo además un archivo MAP existente con el mismo
+      nombre!</i></b>
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      ATENCIÓN: ¡En algunos juegos con voces, si eliges no modificar el archivo
+      .MAP durante la transformación de un clon, la frase nunca será mostrada en
+      el juego! El juego no encontrará el audio de la frase, y además la frase
+      desaparecerá rápidamente de la pantalla. Para verificar que todas las
+      frases en nuestro archivo de mensajes tienen una referencia en el MAPeado
+      del audio, podemos elegir Verificar mensajes en el MAPeado... desde el
+      menú Audio y entonces elegir el archivo .MAP que usarás en el juego. Una
+      lista de omisiones será mostrada. Obviamente, los clones figurarán entre
+      las omisiones, y así las frases no serán dichas en el juego, al igual que
+      las escritas en el interface -y esto es totalmente normal-.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Una vez el archivo MAP esté cargado, es también posible cargar el archivo
+      RESOURCE.AUD que contiene archivos WAV (archivos de sonido), por medio de la
+      acción apropiada en el menú Audio. ¡Desde el mismo menú también será posible
+      reproducir las voces a través de tus altavoces!
+      </p>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Glosario</font></b></div>
+					</td>
+					<td>
+      <p>
+      El glosario es un archivo de texto en el que podemos tomar notas de todas las
+      traducciones de palabras importantes, nombres, lugar o cualquier otra cosa que
+      queramos verificar. Para añadir una palabra al glosario, elige en ambos el
+      campo ENREDAR y el campo TRANS y elige la acción "Añadir elección" del menú
+      Glosario. Las definiciones en el archivo wordlookup.txt también puede ser
+      añadidas manualmente, pero primero debemos crear el glosario y debe estar en
+      el mismo directorio que el archivo de Mensajes.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Cuando elijamos verificar las palabras en el archivo actual de mensajes -a través
+      de la acción de menú “Comprobar palabras”-, el programa analizará cada frase y
+      contará cada caso en cada definición, y entonces intentará encontrarlas en
+      el texto traducido. SCIaMano simplemente comprueba cuantos casos de cada
+      definición están presentes y cuantas veces corresponde a una frase traducida.
+      </p>
+	  <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Este mecanismo en muy fiable, aunque puede que algunas veces nos confunda al
+      no hacerlo con palabras exactas (por ejemplo, asumiríamos lampaDARIO y
+      Dario como un caso válido de Dario).
+      </p>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Otras funciones</font></b></div>
+					</td>
+					<td>
+      <p>
+      Hay otras funciones disponibles en el menú Archivo.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Es posible Importar las frases diréctamente de otro archivo de Mensajes usando
+      “Importar desde un mensaje”, o comparar frases en el archivo actual con otras
+      de otro archivo usando “Comparar con mensajes”.
+      </p>
+	  <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Además es posible exportar todas las frases a un archivo de texto para
+      importarlas más tarde. Como ejemplo, es bueno practicar el exportar frases
+      para luego pasarlas por un corrector ortográfico de cualquier procesador de
+      textos, y después volverlas a importar.
+      </p>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Caracteres especiales</font></b></div>
+					</td>
+					<td>
+      <p>
+      Básicamente SCI no ofrece caracteres acentuados en los archivos de Fuentes
+      usados en sus juegos (sobre todo en las versiones americanas), así que
+      tendremos que usar archivos de fuentes alternativos o modificados. A veces
+      es posible encontrarlas en juegos SCI que ya han sido traducidos (como las
+      versiones alemanas, francesas, españolas o italianos de los mismos). Algunas
+      de esas fuentes están incluídas en el directorio Fonts de TraduSCI. Puedes
+      renombrarlas acorde a aquellas que usa el juego (por ejemplo, si queremos
+      reemplazar 0.fon, la renombramos a 0.fon y la ponemos en el mismo directorio
+      donde está el juego).
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Como alternativa, es posible crear nuestras propias fuentes o modificar las
+      originales, usando otros programas como SCI Studio de Brian Provinciano o
+      SCI Companion.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none" align="center">
+      <img height="401" hspace="0" src="cp_ibm437.gif" width="401" border="0" alt="Caracteres especiales">
+      </p>
+      <p style="font-size: 8pt; MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none" align="center">
+      El código usado por los juegos SCI es el IBM437 mostrado arriba.
+      </p>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Imágenes</font></b></div>
+					</td>
+					<td>
+      <p>
+      Es posible ver y modificar imágenes usando FotoSCIhop, también proporcionado.
+      Puedes cargar archivos .P56 (fondos) y .V56 (imágenes dinámicas) usando el
+      procedimiento anteriormente descrito de cargar desde un Volumen o puedes
+      cargar simplemente el archivo.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Podemos usar los cursores del teclado para deslizarnos entre las imágenes
+      animadas.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      El mostrar las imágenes es muy útil para entender el contexto de las frases
+      en un archivo de Mensajes asociados a ella. Eligiendo el archivo .P56 que
+      tiene el mismo índice que el archivo .MSG que nos interesa, seremos capaces
+      de recoger más información de una particular zona (llamada "room") del juego.
+      </p>
+	  <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Modificar imágenes es más complejo, y debes usar otros programas de diseño
+      gráfico que no comprometan algunos aspectos de la imagen original.
+      </p>
+					</td>
+				</tr>
+			</table>
+
+						<div align="center">
+							<p><img alt="" src="paletteeng.jpg" border="1"></p>
+                            <p style="font-size: 8pt; MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none" align="center">
+                            <font color="#00FF00">Colores constantes</font>;
+                            <font color="#FF0000">Colores translúcidos</font>;
+                            <font color="#00FFFF">Colores transparentes</font>
+                            </p>
+						</div>
+
+		<table border="0" cellspacing="0" cellpadding="10">
+			<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Tabla de colores</font></b></div>
+					</td>
+					<td>
+      <p>
+      Una imagen SCI siempre va asociada a una Tabla de Colores (o Paleta de Colores).
+      Esta paleta es esencial para la correcta visualización de la imagen, además la
+      herramienta FotoSCIhop no te permitirá modificar los colores de la paleta, o
+      al menos intentará evitar hacerlo. Una modificación puede causar problema a la
+      hora de mostrar las imágenes en el juego. Tomemos, por ejemplo, la típica
+      paleta SCI como la mostrada arriba; el último color (que, entre otras cosas,
+      no está definido en la tabla como indica la cruz) es transparente, y
+      representa la zona que no debe aparecer en la imagen (será reemplazada por
+      otras imágenes -normalmente en el archivo del mismo nombre pero con
+      extensión .V56). Ahora intenta pensar que pasaría si este color fuera
+      cambiado; ¡las zonas azules -de color cyan- aparecerían en el juego!
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Los primeros colores de la imagen, los encerrados en verde, son invariables en
+      casi todas las "rooms" del juego, porque son colores que se usan para dibujar
+      a los personajes del juego.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Los últimos colores en rojo son también llamados colores translúcidos. El objeto
+      dibujado usando esos colores aparecerá como una sombra bajo la imagen.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      A pesar de estas reglas generales, pueden cambiar de un juego a otro. Por ejemplo
+      no todos los juegos SCI soportan colores translúcidos o el mismo número
+      constante de colores. Además es importante intentar preservar las
+      características a la paleta original de la imagen.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Algunos archivos, además, no tienen asociada una tabla de colores. En esos
+      casos, FotoSCIhop automáticamente crea una tabla de colores falsa hecha
+      con grises (que no será incluída en el archivo cuando se grabe). Una
+      tabla de colores desde el menú puede ser insertada (pero a diferencia
+      de la tabla de grises, será guardada dentro del archivo en caso de
+      modificaciones).
+      </p>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width="60">
+				<div align="right">
+							<b><font size="2">Herramientas de dibujo</font></b></div>
+					</td>
+					<td>
+      <p>
+      Programas de diseño gráfico muy básicos, como Microsoft Paint por ejemplo, tienden
+      a cambiar el orden de los colores usados en la imagen; otros programas como
+      Adobe Photoshop (de donde tomamos el nombre de la herramienta) a veces
+      pueden dar problemas, aunque normalmente funcionan y cargan la imagen como
+      "Indexada" (es decir, con la paleta de colores propia de la imagen).
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Una situación como esta podría darse con un programa inadecuado: supongamos que
+      el color 250 es azul, pero también el color número 15 tienen exáctamente la
+      misma tonalidad de azul, y que el programa asocia todas las tonalidades de
+      azul al número 15 de la paleta. Supongamos que el color 250 era transparente,
+      y el color 15 no. Entonces, en el juego, los colores azules también aparecerán,
+      cuando deberían ser transparentes.
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Se sugiere que el programa a utilizar respete el orden de los colores duplicados
+      en la paleta. La siguiente lista de programas freeware (gratuítos) responden
+      a esta necesidad:
+      </p>
+						<p>
+						<p>-<a href="http://www.humanbalance.net/gale/us/">GraphicsGale</a></p>
+						<p>-<a href="http://www.memecode.com/image.php">i.Mage</a></p>
+						<p>-iDraw Chara Maker</p>
+						<p>-<a href="http://www.yildun.com/wscanner.html">Yildun Scanner</a></p>
+						<p>-<a href="http://www.eclipse-game.com/?dat=7">GrafX 2</a></p>
+      <p></p>
+						<p><span lang="EN-GB"
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'; mso-ansi-language: EN-GB; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: IT; mso-bidi-language: AR-SA">
+      Como alternativa también puedes usar esta herramientas shareware (de prueba):</span></p>
+						<p>-<a href="http://www.cosmigo.com/promotion/index.php">Pro Motion</a></p>
+						<p>-<a href="http://www.iota.co.uk/tca/home/home.html">The Complete Animator</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Modificando imágenes</font></b></div>
+					</td>
+					<td>
+      <p>
+      Para modificar una imagen, debes exportar el archivo a un Mapa de Bits (.BMP)
+      desde el menú Imagen. Después de que el archivo BMP exportado haya sido
+      modificado, debe ser importado de nuevo desde el mismo menú. Luego puedes
+      guardar el archivo como uno nuevo o, simplemente, guardar los cambios en
+      el archivo original ya existente.
+      </p>
+	  <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Hay que recordar algo importante y es que los archivos SCI a veces tienen
+      varias imágenes en su interior, que obviamente tendrán que ser modificadas
+      donde sea necesario. En la parte superior del programa están las indicaciones
+      de cuantas celdas y bucles contiene el archivo actual (cada bucle se compone
+      de un número de celdas).
+      </p>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Script</font></b></div>
+					</td>
+					<td>
+      <p>
+      Modificar un script es una operación raramente necesaria para la versión SCI1.1/32,
+      pero a veces hay que hacerlo. En algunos casos, como Quest for Glory I (VGA),
+      hay cadenas de texto dentro de los archivos de Scripts Dinámicos (Heap, .HEP) que
+      deben ser traducidos y puede hacer sin muchos problemas con un editor
+      hexadecimal, normalmente usando la técnica de "reemplazar letra a letra". De
+      todos modos, para más información sobre Scripts, consulta el manual de
+      <i>d3m3nt14 tr4dUx10n3s</i> en http://dementia.ludoskopos.com
+      </p>
+	  <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Relativo a SCI32, hay un programa disponible en el paquete TraduSCI llamado
+      SCI Dumper Script y que permite desemsamblar los scripts.
+      </p>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Conclusiones</font></b></div>
+					</td>
+					<td>
+      <p>
+      Recuerda que todos los archivos que modifiques (MSG, MAP, P56, V56, FON, SCR, HEP y
+      demás) deben estar dentro del mismo directorio donde tienes el juego.
+      </p>                      </td>
+				</tr>
+				<tr>
+					<td valign="top" width="60">
+						<div align="right">
+							<b><font size="2">Apéndice</font></b></div>
+					</td>
+					<td>
+						<div align="left">
+      <p>
+      Esta es una lista que ofrece una visión general de las posibilidades que
+      ofrecen las herramientas, en el momento que se escribe este manual. Algunos
+      de estos programas, que son por así decirlo “esenciales”, ¡ya han sido incluídos
+      en TraduSCI!
+      </p>
+      <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      SCI Resource Dumper de Vladimir Gneushev te permite extraer datos de la mayoría
+      de los juegos SCI1.1 y SCI32. Para algunos juegos que no soportan SCI Resource
+      Dumper usaremos el programa SCI Decoder VGA, que es también muy bueno para
+      visualizar imágenes. La versión incluída tienes unas cuantas modificaciones
+      de la original de Carl Muckenhoupt. Todos estos programas pueden ser encontrados
+      en el directorio Tools.
+      </p>
+	  <p style="MARGIN: 5pt 0pt; mso-pagination: none; mso-layout-grid-align: none">
+      Un programa que no he incluído pero que es muy útil para modificar Fuentes es
+      SCI Studio de Brian Provinciano. Otro producto de Brian que se ha incluído es
+      SCI VGA View Editor, que puede ser usado para Eco Quest I.
+      </p>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div align="center">
+			<p></p>
+			<h4><font size="3">Juegos SCI1.1</font></h4>
+		</div>
+		<center>
+			<p><font size="3">
+					<table border="1" cellpadding="5" cellspacing="0">
+						<tr>
+							<td><font size="2"><b>Nombre</b></font></td>
+							<td>
+								<center>
+									<b><font size="2">SRD</font></b></center>
+							</td>
+							<td><b><font size="2">FotoSCIhop</font></b></td>
+							<td>
+								<center>
+									<b><font size="2">Fuentes</font></b></center>
+							</td>
+							<td><font size="2"><b>Notas</b></font></td>
+						</tr>
+						<tr>
+							<td><font >Eco Quest I</font></td>
+							<td>
+								<center>
+									<font
+    >No</font></center>
+							</td>
+							<td>
+								<center>
+									<font
+    >No*</font></center>
+							</td>
+							<td>
+								<center>
+									<font >
+      <center>Extendidas</center></font></center>
+							</td>
+							<td><font size="2">El archivo RESOURCE va numerado del 0 al 3 como extensión.</font></td>
+						</tr>
+						<tr>
+							<td><font >Quest for Glory I (VGA remake)</font></td>
+							<td>
+								<center>
+									<font
+    >Sí</font></center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Base</center>
+							</td>
+							<td><font size="2">
+                            SCIResDump debe ser 'forzado' con los parámetros /m3 /v1 /p1.</font></td>
+						</tr>
+						<tr>
+							<td><font >Police Quest I (VGA remake)</font></td>
+							<td>
+								<center>
+									No</center>
+							</td>
+							<td>
+								<center>
+									No*</center>
+							</td>
+							<td>
+								<center>
+									Base</center>
+							</td>
+							<td>
+      <p><font size="2">SCI Decoder sólo es capaz de mostrar imágenes de objetos, pero no de fondos.</font></p>
+      <p><font size="2">Para los Mensajes, SCIResDump debe ser 'forzado' con los parámetros /nRESOURCE.MSG MESSAGE.MAP -1</font></p>
+							</td>
+						</tr>
+						<tr>
+							<td><font size="3">Quest for Glory III</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Base</center>
+							</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td><font size="3"><nobr>Island of Dr. Brain 1</nobr></font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Base</center>
+							</td>
+							<td><font size="3">-</font></td>
+						</tr>
+						<tr>
+							<td><font size="3"><nobr>Island of Dr. Brain 2</nobr></font></td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td><font size="2">Sin verificar.</font></td>
+						</tr>
+						<tr>
+							<td><font size="3">King's Quest 6</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Base</center>
+							</td>
+							<td><font size="3">-</font></td>
+						</tr>
+						<tr>
+							<td><font size="3">Space Quest IV (Windows)</font></td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td><font size="2">Sin verificar.</font></td>
+						</tr>
+						<tr>
+							<td><font size="3">Eco Quest II</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+      <center>Extendidas</center>
+									</center>
+							</td>
+							<td><font size="3">-</font></td>
+						</tr>
+						<tr>
+							<td><font size="3">Space Quest 5</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Base</center>
+							</td>
+							<td><font size="3">-</font></td>
+						</tr>
+						<tr>
+							<td><font size="3">Pepper's Adventures in time (alias Twisty History)</font></td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td><font size="2">Sin verificar.</font></td>
+						</tr>
+						<tr>
+							<td><font >Laura Bow 2</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Base</center>
+							</td>
+							<td><font size="2">SCIResDump debe ser 'forzado' con los parámetros /m3 /v1 /p1 para 'RESOURCE.MSG'. </font></td>
+						</tr>
+						<tr>
+							<td><font >Freddy Pharkas</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Base</center>
+							</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td><font >Quest for Glory III (Italiano)</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+      <center>Extendidas</center>
+									</center>
+							</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td><font >Leisure Suit Larry 6 (DOS/WIN)</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Base</center>
+							</td>
+							<td>-</td>
+						</tr>
+					</table>
+				</font></p>
+		</center>
+		<div align="center">
+			<p><font size="2">* Puedes usar SCI Decoder VGA para mostrar las imágenes.</font></p>
+			<h4><br>
+			</h4>
+			<h4><font size="3">Juegos SCI32</font></h4>
+		</div>
+		<center>
+			<p><font size="3">
+					<table border="1" cellpadding="5" cellspacing="0">
+						<tr>
+							<td><font size="2"><b>Nombre</b></font></td>
+							<td>
+								<center>
+									<b><font size="2">SRD</font></b></center>
+							</td>
+							<td>
+								<center>
+									<b><font size="2">FotoSCIhop</font></b></center>
+							</td>
+							<td>
+								<center>
+									<b><font size="2">Fuentes</font></b></center>
+							</td>
+							<td><font size="2"><b>Notas</b></font></td>
+						</tr>
+						<tr>
+							<td><font >Quest for Glory IV</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Base</center>
+							</td>
+							<td><font size="2">SCIResDump debe ser 'forzado' al modo SCI32 con los parámetros /m3 /v3 /p3.</font></td>
+						</tr>
+						<tr>
+							<td>Quest for Glory IV (Tedesco)</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Extendidas</center>
+							</td>
+							<td><font size="2">SCIResDump debe ser 'forzado' al modo SCI32 con los parámetros /m3 /v3 /p3</font></td>
+						</tr>
+						<tr>
+							<td><font >Gabriel Knight (Floppy y CD)</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+      <center>Extendidas</center>
+									</center>
+							</td>
+							<td><font size="2">SCIResDump debe ser 'forzado' al modo SCI32 con los parámetros /m3 /v3 /p3</font></td>
+						</tr>
+						<tr>
+							<td><font >Torin's Passage</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Base</center>
+							</td>
+							<td><font size="2">Los archivos RESOURCE son llamados 'RESMAP.000' y 'RESSCI.000'.</font></td>
+						</tr>
+						<tr>
+							<td><font size="3">Gabriel Knight 2 (Italiano)</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Extendidas</center>
+							</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td><font size="3">King's Quest VII (Italiano)</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Extendidas</center>
+							</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td><font size="3">Phantasmagoria</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td><font size="2">-</font></td>
+						</tr>
+						<tr>
+							<td><font >Quest for Glory IV (cd)</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Base</center>
+							</td>
+							<td><font size="2">SCIResDump debe ser 'forzado' al modo SCI32 con los parámetros /m3 /v3 /p3</font></td>
+						</tr>
+						<tr>
+							<td><font >Shivers (Windows)</font></td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td><font size="2">Sin verificar.</font></td>
+						</tr>
+						<tr>
+							<td><font size="3">Phantasmagoria 2</font></td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td><font size="2">Sin verificar.</font></td>
+						</tr>
+						<tr>
+							<td><font >Leisure Suit Larry 7</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+      <center>Extendidas</center>
+									</center>
+							</td>
+							<td><font size="2">Los archivos RESOURCE son llamados 'RESMAP.000' y 'RESSCI.000'.</font></td>
+						</tr>
+						<tr>
+							<td><font >RAMA</font></td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td><font size="2">Sin verificar.</font></td>
+						</tr>
+						<tr>
+							<td><font size="3">Shivers 2</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Base</center>
+							</td>
+							<td><font size="2">Los archivos RESOURCE son llamados 'RESMAP.001' y 'RESSCI.001'.</font></td>
+						</tr>
+						<tr>
+							<td><font size="3">LightHouse</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									?</center>
+							</td>
+							<td><font size="2">-</font></td>
+						</tr>
+						<tr>
+							<td><font size="3">Space Quest 6</font></td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Sí</center>
+							</td>
+							<td>
+								<center>
+									Base</center>
+							</td>
+							<td><font size="2">-</font> </td>
+						</tr>
+					</table>
+				</font></p>
+		</center>
+		<div align="center">
+			<p><font size="2">Nota: esta no es una lista completa, pero lo será en un futuro. En las columnas, SRD significa
+            SCI Resource Dumper.</font></p>
+		</div>
+		<table border="0" cellspacing="0" cellpadding="10">
+			<tr>
+					<td valign="top" width="60">
+						<div align="right">
+
+							</div>
+					</td>
+					<td>
+					<div align="left">
+      <p><font size="3">
+      Tienes que extraer los datos del juego usando SCI Resource Dumper o SCI Decoder VGA.
+      Dependiendo de la versión del juego, sus datos podrían estar en diferentes tipos de
+      archivos, pero normalmente tendrás un archivo 'RESOURCE.MAP' (el nombre puede variar
+      ligeramente) que almacena las referencias de los datos contenidos en uno o más
+      archivos del tipo 'RESOURCE.000'. Algunas veces, hay un archivo 'MESSAGE.MAP' y
+      'RESOURCE.MSG' que sólo contiene los archivos Mensaje del juego (los cuales son
+      las cadenas de texto a traducir). Tendrás que decir al programa que archivos
+      procesar, y unas cuantas direcciones en sus formatos. Para que sea más sencillo,
+      copia los archivos en el directorio del programa SRD y en una ventana de Windows
+      teclea:</font></p>
+      <center><pre><font size="2">SCIResDump /m&lt;SCI_Version&gt; /v&lt;SCI_Version&gt; /p&lt;SCI_Version&gt; /h /n&lt;Volume&gt; &lt;Resource_Map&gt; -1</font></pre></center>
+      <p><font size="3">
+      donde &lt;SCI_Version&gt; debería ser 1 o 3 y depende de la versión SCI del juego
+      que vayas a extraer (para SCI32 es el 3 y para el resto el 1); estos tres argumentos
+      identifican el formato de los datos, aunque podrás jugar con ellos si algo va mal.
+      Mira la anterior tabla de compatibilidad para encontrar soluciones. (Aviso: algunas
+      veces puedes omitir esos parámetros y SRD intentará adivinar el formato, sin embargo
+      es más seguro especificarlo). Reemplaza &lt;Volume&gt; por la ruta del archivo con
+      los datos, normalmente 'RESOURCE.000', y &lt;Resource_Map&gt; con la ruta del MAPeado
+      de RESOURCE, comúnmente llamado 'RESOURCE.MAP'. Algo así debería ser:</font></p>
+      <center><pre><font size="2">SCIResDump /m3 /v3 /p3 /h /nRESOURCE.000 RESOURCE.MAP -1</font></pre></center>
+      <div align="left">
+      <p><font size="3">
+      y el resultado, si nada va mal, será cientos de archivos extraídos al directorio
+      del programa. Ahora, con mucha paciencia (y con suerte sólo lo harás una vez)
+      elígelos y almacénalos por directorios separados.</font>                                                                  <br></p></div>
+					</div>
+	  <p>
+      Si el juego que vas a traducir no es soportado por SRD, puedes usar
+      SCI Decoder VGA. Para hacerlo, copia los archivos que quieres extraer
+      (normalmente 'RESOURCE.MSG', 'MESSAGE.MAP', 'RESOURCE.000' y 'RESOURCE.MAP')
+      al directorio del programa y ejecútalo. A la izquierda verás una lista de
+      todos los datos del archivo cargado, para que todo pueda ser extraído se
+      pulsará la tecla X. Si sólo quieres extraer un archivo, pulsa la tecla D.
+      Además, si pulsas ENTER, puedes ver una imagen, si es elegida claro. Incluso
+      al usar SCI Decoder es pesado almacenar los archivos extraídos en directorios
+      separados, como se describió antes. Cuando un archivo separado de Mensaje
+      ya está presente, tendrás que repetir la operación de nuevo, sólo recuerda
+      quitar del directorio del programa el archivo 'RESOURCE.MAP' anterior o
+      el programa intentará extraer datos de nuevo de ese archivo.
+					</p>
+				</td>
+			</tr>
+		</table>
+	</body>
+
+</html>

@@ -1,0 +1,23 @@
+This folder (Tools) contains some programs which you may find useful for your
+translation project.
+
+
+
+SCI Decoder VGA 1.1 is used to extract and display data from Police QUest I (VGA)
+and Eco Quest I. The version here included is not the original one by Carl Muckenhoupt,
+but this one has been slightly modified by me to support Police Quest.
+
+SCI Resource Dumper 1.2.3 is able to extract data from the other SCI1.1 and SCI32
+Sierra games, but Eco Quest I and Police Quest I (VGA). The program is copyright
+Vladimir Gneushev, but I have changed this version in order to support some SCI1.1
+games like Quest for GLory I (VGA).
+
+SCI VGA View Editor is a program by Brian Provinciano to edit V56 (objects animations)
+but it only supports Eco Quest I and Police Quest I (VGA).
+
+SCRipt Parser 0.4 makes you able to disassemble SCI32 games scripts to an easier but
+extremely detailed textual format.
+
+A-SCI is another disassembler that generates source files that can later be
+reassembled. It can be useful for minor changes to SCI1.1 and SCI32 scripts.
+The author of this program is unknown.

@@ -1,0 +1,5 @@
+Licenza di Utilizzo
+
+TraduSCI è stato creato da Enrico Rolfi ed è open source (licenza GPL), può essere liberamente utilizzato e modificato. Il programma è distribuito senza nessuna garanzia e l'autore non risponde di eventuali danni provocati in modo diretto od indiretto dal suo utilizzo. Se intraprendete un progetto di traduzione con esso, vi chiedo di farmelo sapere e di comunicarmi le vostre impressioni e suggerimenti sul programma.
+Nel pacchetto di traduzione SCI1.1/SCI32 sono presenti anche i seguenti programmi: SCI Resource Dumper di Vladimir Gneushev, che è fornito in una versione da me appositamente modificata. SCI Decoder VGA è un programma di Carl Muckenhoupt ed è stato anch'esso modificato da me per aggiungere delle funzionalità necessarie alla traduzione. WinGraph32 è una versione per Windows del tool open source VCG compilata dalla DataRescue e i cui sorgenti sono disponibili dal loro sito. 
+Nessuna di queste persone (me compreso) è in alcun modo affiliata a Sierra, che detiene i diritti di copyright sulle tecnologie SCI e su tutti i giochi elencati nel manuale.

@@ -1,0 +1,4 @@
+Here are some international extended SCI fonts that I've managed to find in
+various SCI games. Together with those are the standard base fonts which I
+have included for no particular use. Chances are you'll be able to find the
+font you need between these.
