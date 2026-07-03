@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="FotoSCIhop" />
+		<Option pch_mode="2" />
+		<Option compiler="winlibs-i686-posix-dwarf-gcc-1430-mingw-w64ucrt-1200-r1" />
+		<Build>
+			<Target title="default">
+				<Option output="FotoSCIhop" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="winlibs-i686-posix-dwarf-gcc-1430-mingw-w64ucrt-1200-r1" />
+				<Compiler>
+					<Add option="-fpermissive" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-DITALIAN" />
+		</Compiler>
+		<Linker>
+			<Add option="-static-libstdc++" />
+			<Add option="-static-libgcc" />
+			<Add option="-static" />
+		</Linker>
+		<Unit filename="FotoSCIhop.cpp" />
+		<Unit filename="FotoSCIhop.h" />
+		<Unit filename="ita.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="language.h" />
+		<Unit filename="list.cpp" />
+		<Unit filename="list.h" />
+		<Unit filename="p56files.cpp" />
+		<Unit filename="p56files.h" />
+		<Unit filename="palette.cpp" />
+		<Unit filename="palette.h" />
+		<Unit filename="scicell.cpp" />
+		<Unit filename="scicell.h" />
+		<Unit filename="sciloop.cpp" />
+		<Unit filename="sciloop.h" />
+		<Unit filename="stdafx.cpp" />
+		<Unit filename="stdafx.h" />
+		<Unit filename="v56files.cpp" />
+		<Unit filename="v56files.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
